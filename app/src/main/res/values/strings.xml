@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">CovidWatch</string>
+
+    <string name="who">Check latest guidelines on COVID-19 by WHO\n<a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">all info here</a>
+</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="web_client_id">848242280024-t569tqpedmr9fto5g44dd0pk71qmk9dg.apps.googleusercontent.com</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

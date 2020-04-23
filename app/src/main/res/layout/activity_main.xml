@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:weightSum="2"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:text="@string/who"></TextView>
+
+    <TextView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:text="Near by Stores"></TextView>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="5dp"
+       android:layout_weight="2"
+       android:orientation="vertical">
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recyclerview"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:scrollbars="vertical"
+           android:scrollbarStyle="insideOverlay"
+           android:scrollIndicators="right"
+           android:layout_alignParentStart="true"
+           android:layout_alignParentLeft="true" />
+
+       <ProgressBar
+           android:id="@+id/pbar"
+           android:layout_width="111dp"
+           android:layout_height="127dp"
+           android:progress="0"
+           android:indeterminate="false"
+           android:layout_alignParentStart="true"
+           android:layout_alignParentEnd="true"
+           android:layout_alignParentBottom="true"
+           android:layout_gravity="center_vertical|center_horizontal"
+           android:layout_marginStart="149dp"
+           android:layout_marginEnd="150dp"
+           android:layout_marginBottom="91dp"
+           android:visibility="visible"></ProgressBar>
+
+
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+           android:layout_width="wrap_content"
+           android:id="@+id/fab"
+           android:layout_height="90dp"
+           android:background="@color/white"
+           android:backgroundTint="@color/white"
+           android:layout_alignParentEnd="true"
+           android:layout_alignParentRight="true"
+           android:layout_alignParentBottom="true"
+           android:layout_gravity="right|bottom|end"
+           android:layout_marginEnd="14dp"
+           android:layout_marginRight="14dp"
+           android:layout_marginBottom="17dp"
+           android:src="@drawable/ic_add"
+           app:layout_anchor="@id/recyclerview"
+           app:layout_anchorGravity="end"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+           android:layout_width="wrap_content"
+           android:id="@+id/reload"
+           android:layout_height="90dp"
+           android:background="@color/white"
+           android:backgroundTint="@color/white"
+           android:layout_alignParentStart="true"
+           android:layout_alignParentLeft="true"
+           android:layout_alignParentBottom="true"
+           android:layout_gravity="left|bottom|start"
+           android:layout_marginStart="14dp"
+           android:layout_marginLeft="14dp"
+           android:visibility="gone"
+           android:layout_marginBottom="17dp"
+           app:fabSize="normal"
+           app:maxImageSize="40dp"
+           android:src="@drawable/ic_sync_black_24dp"
+           app:layout_anchor="@id/recyclerview"
+           app:layout_anchorGravity="end"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+   </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:id="@+id/nav"
+
+        >
+        <include
+            android:visibility="visible"
+            android:id="@+id/navigation"
+            layout="@layout/bottom_navigation_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            />
+
+    </LinearLayout>
+</LinearLayout>
