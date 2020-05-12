@@ -13,7 +13,7 @@
         android:enabled="true"
         android:visible="true"
         android:icon="@drawable/store"
-        android:title="Locate Stores"
+        android:title="Services"
         />
 
     <item

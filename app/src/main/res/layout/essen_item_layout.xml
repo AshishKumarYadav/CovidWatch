@@ -52,31 +52,51 @@
                     android:textColor="#404040"></TextView>
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/posted_by"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:layout_gravity="start"
-                android:textSize="18dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="10dp"
-                android:textColor="#F44336"
-                android:singleLine="true"
-                android:text="@string/app_name"></TextView>
 
-            <TextView
-                android:id="@+id/post_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right|end"
-                android:layout_marginRight="3dp"
-                android:paddingRight="2dp"
-                android:text="30-03-2020 at 10:20;45 AM"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:textSize="12dp"></TextView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+                <TextView
+                    android:id="@+id/issueId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="9dp"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:text="#1"></TextView>
+
+                <TextView
+                    android:id="@+id/posted_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:singleLine="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    android:text="@string/app_name"
+                    android:textAlignment="center"
+                    android:textColor="#F44336"
+                    android:textSize="15dp"></TextView>
+
+
+                <TextView
+                    android:id="@+id/post_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:paddingRight="2dp"
+                    android:text="30-03-2020 at 10:20;45 AM"
+                    android:textAlignment="center"
+                    android:textSize="12dp"></TextView>
+
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/detail_content"
@@ -113,17 +133,84 @@
             android:layout_marginTop="5dp"
             android:layout_gravity="bottom"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:visibility="visible"
+            android:orientation="vertical">
 
-            <TextView
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Location"
-                android:visibility="gone"
-                android:textAlignment="center"
-                android:textColor="@color/blue"
-                android:textStyle="bold"></TextView>
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Contact"
+                    android:textSize="15dp"
+                    android:textColor="@color/blue"
+                    android:layout_marginRight="150dp"
+                    android:layout_gravity="left"
+                    android:id="@+id/contact"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="right|end"
+                    android:textSize="15dp"
+                    android:text="Status "></TextView>
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:editable="false"
+                    android:focusableInTouchMode="true"
+                    android:paddingTop="3dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_gravity="right|end"
+                    android:textSize="12dp"
+                    android:textColor="#DA6E6E"
+                    android:text="Yet to be solved"></TextView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="gone"
+                    android:id="@+id/st"
+                    android:src="@drawable/tick"></ImageView>
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scrollbars="none">
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit ="marquee_forever"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:scrollHorizontally="true"
+                    android:text="Location"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"></TextView>
+
+            </HorizontalScrollView>
+
 
         </LinearLayout>
 

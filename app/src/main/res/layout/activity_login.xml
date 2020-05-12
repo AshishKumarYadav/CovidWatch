@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="5dp"
             android:textColor="@color/white"
-            android:text="@string/nav_header_title"
+            android:text="@string/app_name"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
         <TextView
             android:id="@+id/email"
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:textColor="@color/white"
-            android:text="android.studio@android.com"
+            android:text=""
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"></TextView>
 
         <com.google.android.gms.common.SignInButton
